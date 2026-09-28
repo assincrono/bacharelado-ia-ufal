@@ -82,3 +82,20 @@ O acesso é o meio pelo qual se chega aos dados de uma fonte. Os mais comuns sã
 - **Web scraping:** extração automatizada de dados de páginas da web, usada quando a fonte não oferece outra forma de acesso (é preciso verificar os termos de uso do site).
 
 O meio de acesso influencia o formato em que os dados chegam e, portanto, a forma como serão lidos.
+
+## Qualidade e compreensão de dados
+
+### Qualidade de dados
+
+A qualidade de dados é o grau em que os dados são adequados ao uso que se pretende fazer deles. Dados de qualidade são suficientemente completos, válidos, únicos, consistentes, acurados e atuais para apoiar uma análise ou decisão.
+
+Ela é avaliada por meio de algumas dimensões:
+
+- **Validade:** verifica se os valores respeitam as regras e os domínios esperados. Por exemplo, uma idade negativa ou uma data com dia 35 são inválidas.
+- **Completude:** verifica se os dados estão preenchidos. Um conjunto de dados pode conter valores nulos ou ausentes.
+- **Unicidade:** verifica se há registros duplicados. Cada entidade deve aparecer apenas uma vez.
+- **Consistência:** verifica se os dados seguem o mesmo padrão e não se contradizem. Por exemplo, em uma coluna de idade, todos os valores devem estar como números inteiros, e não alguns por extenso ("vinte e dois"). O mesmo vale para formatos de data, unidades de medida e valores entre bases diferentes.
+- **Acurácia:** verifica se o dado corresponde à realidade. Por exemplo, um aluno cadastrado com 30 anos quando na verdade tem 20 (o valor é válido, mas incorreto).
+- **Atualidade:** verifica se o dado ainda reflete a situação atual. Por exemplo, um endereço que estava correto na época do cadastro, mas que já mudou.
+
+Uma dimensão pode falhar sem que as outras falhem. Um dado pode ser válido e consistente, mas inacurado, e por isso a qualidade deve ser avaliada em conjunto.
