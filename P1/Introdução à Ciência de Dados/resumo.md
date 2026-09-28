@@ -234,3 +234,19 @@ Quando há muitos *outliers*, uma alternativa é o *robust scaling*, que usa a m
 ##### 3. Aplicar separadamente em treino e teste
 
 Os parâmetros da transformação (mínimo e máximo, ou média e desvio padrão) devem ser calculados apenas com os dados de treino. Em seguida, esses mesmos parâmetros são aplicados aos dados de teste. Se forem calculados com a base inteira, informações do teste vazam para o treino (*data leakage*) e o desempenho medido fica otimista demais.
+
+## Seleção de atributos
+
+Selecionar atributos é escolher quais variáveis serão mantidas na análise ou na modelagem, com base na relevância que têm para o problema. Manter apenas as variáveis informativas reduz o risco de *overfitting* e o custo computacional, além de facilitar a interpretação do modelo.
+
+| Técnica | Descrição |
+|---|---|
+| **Conhecimento do domínio** | Remover atributos claramente irrelevantes para o problema, como o ID do registro ou o nome do aluno ao prever desempenho acadêmico. |
+| **Baixa variabilidade** | Excluir variáveis que quase não mudam, pois pouco ajudam a distinguir os registros. |
+| **Excesso de valores ausentes** | Descartar atributos com pouca informação disponível. |
+| **Correlação entre atributos** | Quando dois atributos são muito correlacionados, carregam informação redundante e um deles pode ser removido. |
+| **Correlação com o alvo** | Atributos com correlação muito baixa com a variável-alvo tendem a ser menos úteis. |
+| **Teste estatístico univariado** | Avaliar individualmente a relação entre cada atributo e o alvo, com testes como ANOVA (atributo numérico e alvo categórico) e qui-quadrado (ambos categóricos). |
+| **Informação mútua** | Medir o quanto conhecer um atributo reduz a incerteza sobre o alvo. |
+| **Importância de atributos** | Treinar um modelo (como árvore de decisão ou *random forest*) e estimar quais variáveis mais contribuem para as previsões. |
+| **Eliminação recursiva (*RFE*)** | Treinar o modelo, retirar o atributo menos útil e repetir o processo até restar o número desejado de atributos. |
