@@ -48,3 +48,9 @@ Outro nome auto-explicativo, coleta corresponde a coletar os dados que serão ut
 
 - Primária: Os dados serão produzidos especificamente para o objetivo da sua análise, por exemplo, você mesmo irá distribuir questionários para os estudantes da UFAL para fazer uma análise com base nas respostas
 - Secundária: Você irá utilizar dados que já existem, como o IBGE ou o UFAL em números
+
+### Leitura de dados
+
+Depois de coletar os dados, é preciso garantir que uma ferramenta consiga interpretar tanto a estrutura quanto o conteúdo deles. Como cada fonte costuma entregar os dados em um formato diferente, o próximo passo é padronizá-los e integrá-los em uma única base, adequada à tarefa de ciência de dados que você quer realizar.
+
+Imagine, por exemplo, que você fez uma coleta secundária: parte dos dados veio de uma API e outra parte de um arquivo CSV. Para trabalhar com eles, você precisará reuni-los em um só lugar, criando uma base consolidada e coerente. Só então será possível acessá-la e conduzir a análise até a conclusão.
