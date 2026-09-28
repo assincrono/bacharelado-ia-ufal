@@ -2,6 +2,29 @@
 
 Ciência de dados é uma área interdisciplinar que combina matemática, estatística, programação, técnicas analíticas e conhecimento do domínio para investigar problemas, produzir conhecimento e apoiar decisões.
 
+## Índice
+
+- [Dado, informação, conhecimento](#dado-informação-conhecimento)
+- [Fontes, tipos, formatos e estruturas de dados](#fontes-tipos-formatos-e-estruturas-de-dados)
+    - [Fontes de dados](#fontes-de-dados)
+    - [Tipos de dados](#tipos-de-dados)
+    - [Formatos de dados](#formatos-de-dados)
+    - [Estruturas de dados](#estruturas-de-dados)
+- [Coleta, leitura e acesso a dados](#coleta-leitura-e-acesso-a-dados)
+    - [Coleta de dados](#coleta-de-dados)
+    - [Leitura de dados](#leitura-de-dados)
+    - [Acesso a dados](#acesso-a-dados)
+- [Qualidade e compreensão de dados](#qualidade-e-compreensão-de-dados)
+    - [Qualidade de dados](#qualidade-de-dados)
+    - [Principais problemas no pré-processamento de dados](#principais-problemas-no-pré-processamento-de-dados)
+        - [Valores ausentes (*missing values*)](#valores-ausentes-missing-values)
+        - [Dados duplicados](#dados-duplicados)
+        - [Ruídos e erros](#ruídos-e-erros)
+        - [Padronização de formatos](#padronização-de-formatos)
+        - [Variáveis categóricas (*encoding*)](#variáveis-categóricas-encoding)
+        - [Normalização de escalas](#normalização-de-escalas)
+- [Seleção de atributos](#seleção-de-atributos)
+
 ## Dado, informação, conhecimento
 
 - **Dado:** representação bruta de um fato, sem contexto ou significado próprio.
