@@ -1,6 +1,6 @@
 # Introdução à Ciência de Dados
 
-Ciência de dados é uma área interdisciplinar que combina matemática, estatística, programação, técnicas analíticas e conhecimento do domínio para investigar problemas, produzir conhecimento e apoiar decisões. Em geral, o trabalho segue um ciclo: coleta, leitura e integração, limpeza, análise e comunicação dos resultados.
+Ciência de dados é uma área interdisciplinar que combina matemática, estatística, programação, técnicas analíticas e conhecimento do domínio para investigar problemas, produzir conhecimento e apoiar decisões.
 
 ## Dado, informação, conhecimento
 
@@ -55,7 +55,7 @@ Os dados podem ser organizados de 3 formas:
 - **Semiestruturados:** possuem alguma organização, mas sem estrutura tabular rígida, como arquivos JSON e XML.
 - **Não estruturados:** não apresentam estrutura previamente definida, como textos, PDFs, imagens e vídeos.
 
-## Coleta e leitura de dados
+## Coleta, leitura e acesso a dados
 
 ### Coleta de dados
 
@@ -71,3 +71,14 @@ Após a coleta, é preciso que uma ferramenta consiga interpretar a estrutura e 
 Como cada fonte costuma entregar os dados em um formato diferente, o passo seguinte é padronizá-los e integrá-los em uma única base, adequada à tarefa de ciência de dados que se pretende realizar.
 
 Imagine uma coleta secundária em que parte dos dados veio de uma API e outra parte de um arquivo CSV. Para trabalhar com eles, é necessário reuni-los em um só lugar, criando uma base consolidada e coerente. Só então é possível acessá-la e conduzir a análise até a conclusão.
+
+### Acesso a dados
+
+O acesso é o meio pelo qual se chega aos dados de uma fonte. Os mais comuns são:
+
+- **Download de arquivos:** a fonte disponibiliza arquivos (CSV, XLSX, JSON etc.) que são baixados e armazenados localmente.
+- **APIs:** interfaces que fornecem dados sob demanda, por meio de requisições, geralmente em JSON.
+- **Consultas a bancos de dados:** os dados são obtidos com linguagens de consulta, como SQL.
+- **Web scraping:** extração automatizada de dados de páginas da web, usada quando a fonte não oferece outra forma de acesso (é preciso verificar os termos de uso do site).
+
+O meio de acesso influencia o formato em que os dados chegam e, portanto, a forma como serão lidos.
