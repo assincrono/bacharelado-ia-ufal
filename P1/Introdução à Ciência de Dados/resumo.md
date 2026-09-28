@@ -99,3 +99,60 @@ Ela é avaliada por meio de algumas dimensões:
 - **Atualidade:** verifica se o dado ainda reflete a situação atual. Por exemplo, um endereço que estava correto na época do cadastro, mas que já mudou.
 
 Uma dimensão pode falhar sem que as outras falhem. Um dado pode ser válido e consistente, mas inacurado, e por isso a qualidade deve ser avaliada em conjunto.
+
+### Principais problemas no pré-processamento de dados
+
+Os problemas abaixo são os mais comuns no pré-processamento de dados.
+
+| Problema | Descrição |
+|---|---|
+| **Valores ausentes (*missing values*)** | Campos sem valor em algumas linhas. |
+| **Dados duplicados** | Registros repetidos, que dão à informação mais peso do que ela realmente tem e enviesam a análise e o modelo. |
+| **Ruídos e erros** | Valores absurdos ou incorretos, como uma idade de 999 anos ou um preço negativo. |
+| **Inconsistência de formatos** | A mesma informação escrita de formas diferentes, como "São Paulo ", " sao paulo " e "SP". |
+| **Escalas diferentes** | Variáveis com magnitudes muito distintas (como salário e nota de 0 a 10) fazem com que as maiores dominem o resultado em algoritmos sensíveis à escala. |
+| **Variáveis categóricas (*encoding*)** | Muitos algoritmos só aceitam entradas numéricas, então categorias como "feminino" e "masculino" precisam ser convertidas. |
+
+Cada problema é detalhado a seguir, junto com as formas usuais de tratá-lo.
+
+#### Valores ausentes (*missing values*)
+
+Há duas famílias de estratégias: eliminar os dados ausentes ou imputar (preencher) valores no lugar deles.
+
+##### Eliminação
+
+- **Remover a coluna:** indicada quando a maior parte dos valores está ausente (como regra prática, mais de 50% a 60%), pois a coluna traz pouca informação.
+- **Remover as linhas:** indicada quando poucas linhas são afetadas (como regra prática, menos de 5%), pois a perda de dados é pequena.
+
+Esses limites são referências, não regras fixas, e dependem do tamanho da base e da importância da variável. Entre os dois extremos, costuma-se preferir a imputação. Vale lembrar também que remover linhas pode enviesar a análise quando a ausência tem causa sistemática (por exemplo, um grupo que deixa de responder a certa pergunta).
+
+##### Imputação estatística
+
+Consiste em substituir os valores ausentes por uma medida resumo da própria coluna. A escolha depende do tipo de dado.
+
+**Dados numéricos: média ou mediana**
+
+A escolha depende da distribuição dos dados. A distribuição gaussiana, também chamada de normal, é um modelo de probabilidade contínua em forma de sino, simétrico em torno de uma média central.
+
+<img width="1128" height="363" alt="Distribuição normal (curva em forma de sino)" src="https://github.com/user-attachments/assets/8bbd04f9-dadc-4122-ae62-30539215898d" />
+
+- **Média:** indicada quando a distribuição é aproximadamente simétrica, como a normal.
+- **Mediana:** indicada quando a distribuição é assimétrica ou há muitos valores extremos (*outliers*), que distorceriam a média.
+
+**Dados categóricos: moda e alternativas**
+
+Quando existe uma única categoria mais frequente (distribuição unimodal), basta usá-la como moda. Quando não existe (amodal, ou seja, todas as categorias têm a mesma frequência) ou existe mais de uma (bimodal), a moda deixa de ser uma escolha clara. Nesses casos, há as seguintes alternativas:
+
+- **Nova categoria (por exemplo, "Desconhecido"):** é a abordagem mais segura e recomendada, e vale para qualquer variável categórica, especialmente quando não há uma moda clara. Ela evita introduzir vieses artificiais, preserva a incerteza dos dados originais e permite que algoritmos de *machine learning* identifiquem a ausência da informação como um possível padrão.
+- **Imputação aleatória proporcional (caso amodal):** quando não é possível criar uma nova categoria, sorteia-se o valor entre as categorias existentes. Como todas têm a mesma frequência, todas recebem a mesma probabilidade. Assim, a distribuição original se mantém, sem inflar nenhuma categoria.
+- **Imputação aleatória entre as modas (caso bimodal):** sorteia-se o valor apenas entre as duas modas, preservando o equilíbrio entre elas. É a mesma lógica da estratégia anterior, mas restrita às categorias mais frequentes.
+
+##### Imputação condicional (segmentação)
+
+Em alguns casos, a bimodalidade surge porque há dois subgrupos diferentes misturados na mesma base. A solução é segmentar a base por outra variável (gênero, região, faixa etária etc.) e recalcular a moda dentro de cada subgrupo. O valor ausente é então preenchido com a moda do grupo a que o indivíduo pertence.
+
+Por exemplo, se a moda da coluna "tipo de calçado" está dividida entre salto e tênis, ao segmentar por gênero a moda do subgrupo feminino pode ser salto e a do masculino, tênis.
+
+##### Imputação preditiva
+
+Em vez de olhar apenas para a coluna com valores ausentes, essa abordagem utiliza as demais variáveis da base para estimar o valor que falta. Podem ser usados modelos como o **K-NN** (*K-Nearest Neighbors*), que se baseia nos registros vizinhos, árvores de decisão ou o **MICE** (*Multiple Imputation by Chained Equations*). É a estratégia mais avançada e também a mais custosa, sendo mais indicada quando a variável ausente se relaciona bem com as outras.
