@@ -10,7 +10,7 @@ Abaixo, você irá encontrar as matérias, em que período elas foram atendidas,
 
 | Período | Matéria |
 |---|---|
-| 1º semestre | Introdução à Ciência de Dados |
+| 1º semestre | [Introdução à Ciência de Dados](https://github.com/assincrono/bacharelado-ia-ufal/tree/main/P1/Introdu%C3%A7%C3%A3o%20%C3%A0%20Ci%C3%AAncia%20de%20Dados) |
 | 1º semestre | Introdução à Inteligência Artificial |
 | 1º semestre | Matemática Discreta para Computação |
 | 1º semestre | Programação 1 |
