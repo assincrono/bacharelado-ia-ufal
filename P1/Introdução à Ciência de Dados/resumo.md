@@ -233,4 +233,4 @@ Quando há muitos *outliers*, uma alternativa é o *robust scaling*, que usa a m
 
 ##### 3. Aplicar separadamente em treino e teste
 
-Os parâmetros da transformação (mínimo e máximo, ou média e desvio padrão) devem ser calculados apenas com os dados de treino. Em seguida, esses mesmos parâmetros são aplicados aos dados de teste. Se forem calculados com a base inteira, informações
+Os parâmetros da transformação (mínimo e máximo, ou média e desvio padrão) devem ser calculados apenas com os dados de treino. Em seguida, esses mesmos parâmetros são aplicados aos dados de teste. Se forem calculados com a base inteira, informações do teste vazam para o treino (*data leakage*) e o desempenho medido fica otimista demais.
