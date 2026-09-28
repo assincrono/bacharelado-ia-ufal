@@ -40,7 +40,7 @@ Os dados podem estar organizados em 3 níveis:
 - Dados semi-estruturados: Possuem uma certa organização, mas não necessariamente uma estrutura tabular rígida (como um JSON)
 - Dados não estruturados: Não apresentam uma estrutura tabular previamente definida (textos, PDFs, imagens, vídeos etc)
 
-## Coleta, leitura e acesso a dados
+## Coleta e leitura de dados
 
 ### Coleta de dados
 
@@ -51,6 +51,8 @@ Outro nome auto-explicativo, coleta corresponde a coletar os dados que serão ut
 
 ### Leitura de dados
 
-Depois de coletar os dados, é preciso garantir que uma ferramenta consiga interpretar tanto a estrutura quanto o conteúdo deles. Como cada fonte costuma entregar os dados em um formato diferente, o próximo passo é padronizá-los e integrá-los em uma única base, adequada à tarefa de ciência de dados que você quer realizar.
+Após coletar os dados, precisamos fazer com que uma ferramenta consiga interpretar sua estrutura e conteúdo. 
+
+Como cada fonte costuma entregar os dados em um formato diferente, o próximo passo é padronizá-los e integrá-los em uma única base, adequada à tarefa de ciência de dados que você quer realizar.
 
 Imagine, por exemplo, que você fez uma coleta secundária: parte dos dados veio de uma API e outra parte de um arquivo CSV. Para trabalhar com eles, você precisará reuni-los em um só lugar, criando uma base consolidada e coerente. Só então será possível acessá-la e conduzir a análise até a conclusão.
