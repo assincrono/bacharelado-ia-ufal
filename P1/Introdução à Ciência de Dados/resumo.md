@@ -39,3 +39,12 @@ Os dados podem estar organizados em 3 níveis:
 - Dados estruturados: Possuem uma organização claramente definida, normalmente em linhas e colunas
 - Dados semi-estruturados: Possuem uma certa organização, mas não necessariamente uma estrutura tabular rígida (como um JSON)
 - Dados não estruturados: Não apresentam uma estrutura tabular previamente definida (textos, PDFs, imagens, vídeos etc)
+
+## Coleta, leitura e acesso a dados
+
+### Coleta de dados
+
+Outro nome auto-explicativo, coleta corresponde a coletar os dados que serão utilizados na sua análise. Essa coleta pode ser:
+
+- Primária: Os dados serão produzidos especificamente para o objetivo da sua análise, por exemplo, você mesmo irá distribuir questionários para os estudantes da UFAL para fazer uma análise com base nas respostas
+- Secundária: Você irá utilizar dados que já existem, como o IBGE ou o UFAL em números
