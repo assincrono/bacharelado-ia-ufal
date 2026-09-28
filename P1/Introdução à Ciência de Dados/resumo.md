@@ -156,3 +156,17 @@ Por exemplo, se a moda da coluna "tipo de calçado" está dividida entre salto e
 ##### Imputação preditiva
 
 Em vez de olhar apenas para a coluna com valores ausentes, essa abordagem utiliza as demais variáveis da base para estimar o valor que falta. Podem ser usados modelos como o **K-NN** (*K-Nearest Neighbors*), que se baseia nos registros vizinhos, árvores de decisão ou o **MICE** (*Multiple Imputation by Chained Equations*). É a estratégia mais avançada e também a mais custosa, sendo mais indicada quando a variável ausente se relaciona bem com as outras.
+
+#### Dados duplicados
+
+O tratamento de dados duplicados é mais simples que o de valores ausentes e segue três passos:
+
+1. **Identificar** as linhas repetidas, comparando todas as colunas ou apenas um subconjunto delas.
+2. **Validar** se são duplicatas reais e não meras coincidências. Duas pessoas podem ter o mesmo nome e a mesma idade sem serem o mesmo registro, por isso a validação deve usar um identificador único, como a chave primária, o ID ou o CPF.
+3. **Remover** as cópias, mantendo apenas uma ocorrência de cada registro.
+
+#### Ruídos e erros
+
+
+
+
