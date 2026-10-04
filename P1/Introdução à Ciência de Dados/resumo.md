@@ -16,13 +16,13 @@ Ciência de dados é uma área interdisciplinar que combina matemática, estatí
     - [Acesso a dados](#acesso-a-dados)
 - [Qualidade e compreensão de dados](#qualidade-e-compreensão-de-dados)
     - [Qualidade de dados](#qualidade-de-dados)
-    - [Principais problemas no pré-processamento de dados](#principais-problemas-no-pré-processamento-de-dados)
-        - [Valores ausentes (*missing values*)](#valores-ausentes-missing-values)
-        - [Dados duplicados](#dados-duplicados)
-        - [Ruídos e erros](#ruídos-e-erros)
-        - [Padronização de formatos](#padronização-de-formatos)
-        - [Variáveis categóricas (*encoding*)](#variáveis-categóricas-encoding)
-        - [Normalização de escalas](#normalização-de-escalas)
+- [Principais problemas no pré-processamento de dados](#principais-problemas-no-pré-processamento-de-dados)
+    - [Valores ausentes (*missing values*)](#valores-ausentes-missing-values)
+    - [Dados duplicados](#dados-duplicados)
+    - [Ruídos e erros](#ruídos-e-erros)
+    - [Padronização de formatos](#padronização-de-formatos)
+    - [Variáveis categóricas (*encoding*)](#variáveis-categóricas-encoding)
+    - [Normalização de escalas](#normalização-de-escalas)
 - [Seleção de atributos](#seleção-de-atributos)
 
 ## Dado, informação, conhecimento
@@ -123,7 +123,7 @@ Ela é avaliada por meio de algumas dimensões:
 
 Uma dimensão pode falhar sem que as outras falhem. Um dado pode ser válido e consistente, mas inacurado, e por isso a qualidade deve ser avaliada em conjunto.
 
-### Principais problemas no pré-processamento de dados
+## Principais problemas no pré-processamento de dados
 
 Os problemas abaixo são os mais comuns no pré-processamento de dados.
 
