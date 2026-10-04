@@ -15,7 +15,6 @@ Ciência de dados é uma área interdisciplinar que combina matemática, estatí
     - [Leitura de dados](#leitura-de-dados)
     - [Acesso a dados](#acesso-a-dados)
 - [Qualidade e compreensão de dados](#qualidade-e-compreensão-de-dados)
-    - [Qualidade de dados](#qualidade-de-dados)
 - [Principais problemas no pré-processamento de dados](#principais-problemas-no-pré-processamento-de-dados)
     - [Valores ausentes (*missing values*)](#valores-ausentes-missing-values)
     - [Dados duplicados](#dados-duplicados)
@@ -107,8 +106,6 @@ O acesso é o meio pelo qual se chega aos dados de uma fonte. Os mais comuns sã
 O meio de acesso influencia o formato em que os dados chegam e, portanto, a forma como serão lidos.
 
 ## Qualidade e compreensão de dados
-
-### Qualidade de dados
 
 A qualidade de dados é o grau em que os dados são adequados ao uso que se pretende fazer deles. Dados de qualidade são suficientemente completos, válidos, únicos, consistentes, acurados e atuais para apoiar uma análise ou decisão.
 
