@@ -249,14 +249,13 @@ Os parâmetros da transformação (mínimo e máximo, ou média e desvio padrão
 
 Selecionar atributos é escolher quais variáveis serão mantidas na análise ou na modelagem, com base na relevância que têm para o problema.
 
-| Técnica | Descrição | Exemplo |
+| Técnica | Ideia principal | Exemplo |
 |---|---|---|
-| **Conhecimento do domínio** | Remover atributos claramente irrelevantes para o problema, com base no entendimento do contexto. | Ao prever a aprovação de estudantes, remover o ID do registro e o nome do aluno. |
-| **Baixa variabilidade** | Excluir variáveis que quase não mudam, pois pouco ajudam a distinguir os registros. | Uma coluna "País" com o valor "Brasil" em 99,9% dos registros. |
-| **Excesso de valores ausentes** | Descartar atributos com pouca informação disponível. | Uma coluna "Segundo telefone" com 90% dos valores nulos. |
-| **Correlação entre atributos** | Quando dois atributos são muito correlacionados, carregam informação redundante e um deles pode ser removido. | "Altura em cm" e "Altura em m" têm correlação 1, então basta manter uma. |
-| **Correlação com o alvo** | Atributos com correlação muito baixa com a variável-alvo tendem a ser menos úteis. | "Número de faltas" tem forte correlação negativa com a nota final, enquanto "número do calçado" tem correlação próxima de zero. |
-| **Teste estatístico univariado** | Avaliar individualmente a relação entre cada atributo e o alvo, com testes como ANOVA (atributo numérico e alvo categórico) e qui-quadrado (ambos categóricos). | ANOVA entre "horas de estudo" (numérico) e "aprovado" (sim/não); qui-quadrado entre "turno" (categórico) e "aprovado". |
-| **Informação mútua** | Medir o quanto conhecer um atributo reduz a incerteza sobre o alvo. | O risco de certa doença é maior em crianças e idosos do que em adultos. A correlação com a idade fica próxima de zero, mas a informação mútua é alta, pois a idade informa bastante sobre o risco. |
-| **Importância de atributos** | Treinar um modelo (como árvore de decisão ou *random forest*) e estimar quais variáveis mais contribuem para as previsões. | Um *random forest* indica que "nota da 1ª prova" e "frequência" são as variáveis mais importantes, e "cidade" contribui quase nada. |
-| **Eliminação recursiva (*RFE*)** | Treinar o modelo, retirar o atributo menos útil e repetir o processo até restar o número desejado de atributos. | Partir de 20 atributos e repetir o ciclo (treinar, retirar o menos útil) até restarem 5. |
+| Conhecimento do domínio | Remover atributos claramente irrelevantes para o problema | id_aluno |
+| Remoção por baixa variabilidade | Excluir variáveis que quase não mudam | coluna com 99,9% do mesmo valor |
+| Remoção por excesso de valores ausentes | Descartar atributos com pouca informação disponível | coluna com 90% de valores ausentes |
+| Correlação | Verificar atributos muito relacionados entre si ou com a variável-alvo | nota e frequencia |
+| Teste estatístico univariado | Avaliar individualmente a relação entre atributo e alvo | qui-quadrado, ANOVA |
+| Informação mútua | Medir o quanto conhecer um atributo reduz a incerteza sobre o alvo | relação entre trabalha e evasao |
+| Importância de atributos em modelos | Usar um modelo para estimar quais variáveis contribuem mais | árvore de decisão |
+| Eliminação recursiva | Retirar gradualmente os atributos menos úteis | RFE |
