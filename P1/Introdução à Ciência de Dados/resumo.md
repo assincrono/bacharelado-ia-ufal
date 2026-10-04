@@ -192,10 +192,10 @@ O tratamento começa pela detecção e depende da natureza do valor encontrado: 
 ##### Detecção
 
 - **Regras de negócio:** filtros lógicos que definem o intervalo de valores possíveis para cada variável. Por exemplo, em um cadastro de pessoas, `Idade >= 0 e Idade <= 110`. Tudo o que estiver fora do intervalo é marcado como erro. Os limites dependem do contexto: em uma base de estudantes universitários, o intervalo poderia ser bem mais estreito.
-- **Métodos estatísticos:** apontam valores atípicos (*outliers*), que ainda precisam ser investigados.
-    - ***Boxplot*:** mostra visualmente os valores que fogem da distribuição.
-    - ***IQR* (intervalo interquartil):** considera atípicos os valores abaixo de Q1 − 1,5 × IQR ou acima de Q3 + 1,5 × IQR.
-    - ***Z-score*:** mede a distância do valor até a média em desvios padrão (valores acima de 3, em módulo, costumam ser considerados atípicos). Funciona melhor quando a distribuição é aproximadamente normal.
+- **Métodos estatísticos:** apontam valores atípicos (*outliers*), que ainda precisam ser investigados. Você pode utilizar:
+    - **Boxplot**
+    - **IQR (intervalo interquartil)**
+    - **Z-score**
 
 As regras de negócio identificam valores **impossíveis**, e os métodos estatísticos identificam valores **incomuns**. Um salário de R$ 1.000.000 pode ser os dois ou apenas o segundo, e é isso que a etapa seguinte precisa esclarecer.
 
