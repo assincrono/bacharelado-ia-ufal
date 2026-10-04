@@ -201,8 +201,8 @@ As regras de negócio identificam valores **impossíveis**, e os métodos estat�
 
 ##### Tratamento
 
-- **Se for um erro:** corrigir o valor quando a origem do problema for identificável (por exemplo, um salário de 1.000.000 digitado no lugar de 1.000). Quando não for possível corrigir, tratar o valor como ausente e aplicar as estratégias vistas em valores ausentes, como a imputação pela mediana do grupo correspondente, ou remover a linha.
-- **Se for um fenômeno real:** manter o dado, pois ele representa algo que de fato aconteceu (por exemplo, uma compra muito acima do normal na Black Friday). Nesse caso, é possível usar modelos menos sensíveis a valores extremos, aplicar transformações (como a logarítmica) ou limitar os extremos a um teto e a um piso (*winsorização*).
+- **Se for um erro:** Tratar o valor como ausente e aplicar as estratégias vistas em valores ausentes, como a imputação pela mediana do grupo correspondente, ou remover a linha.
+- **Se for um fenômeno real:** manter o dado, pois ele representa algo que de fato aconteceu (por exemplo, uma compra muito acima do normal na Black Friday). Nesse caso, é possível usar modelos menos sensíveis a valores extremos.
 
 #### Padronização de formatos
 
