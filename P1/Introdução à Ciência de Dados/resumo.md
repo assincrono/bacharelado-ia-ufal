@@ -206,12 +206,12 @@ As regras de negócio identificam valores **impossíveis**, e os métodos estat�
 
 #### Padronização de formatos
 
-O objetivo é que a mesma informação seja escrita sempre da mesma forma. As etapas abaixo costumam ser aplicadas nesta ordem, porque cada uma facilita a seguinte.
+O objetivo é que a mesma informação seja escrita sempre da mesma forma.
 
 1. **Limpeza básica de textos:** remover espaços extras no início e no fim e converter todo o texto para minúsculas (ou maiúsculas), evitando variações como "São Paulo " e "são paulo".
-2. **Remoção de acentos e caracteres especiais:** transformar "São Paulo" em "Sao Paulo". Em Python, isso pode ser feito com a biblioteca `unicodedata`. Essa etapa deve ser avaliada caso a caso, pois em alguns contextos os acentos distinguem palavras diferentes (como "sábia" e "sabia").
+2. **Remoção de acentos e caracteres especiais:** transformar "São Paulo" em "Sao Paulo". Essa etapa deve ser avaliada caso a caso, pois em alguns contextos os acentos distinguem palavras diferentes (como "sábia" e "sabia").
 3. **Mapeamento de sinônimos:** criar um dicionário que consolide as variações em um único termo. Por exemplo, "sp", "s.p." e "sao paulo" passam a ser "Sao Paulo". Como o mapeamento depende dos textos já limpos, ele vem depois das etapas anteriores, o que reduz o número de variações a listar.
-4. **Datas e números:** unificar as datas em um único padrão, como o ISO 8601 (AAAA-MM-DD), e os números em um único formato decimal (por exemplo, ponto como separador decimal e sem símbolo de milhar). Valores monetários devem usar uma única moeda e uma única representação, e é preciso atenção a datas ambíguas, como "03/04/2026", que pode ser 3 de abril ou 4 de março.
+4. **Datas e números:** unificar as datas em um único padrão, como o ISO 8601 (AAAA-MM-DD), formatos mometários/ponto flutuante devem seguir uma única representação.
 
 #### Variáveis categóricas (*encoding*)
 
@@ -224,9 +224,9 @@ Muitos algoritmos só aceitam entradas numéricas, então as categorias precisam
 
 ##### 2. Aplicar a técnica adequada
 
-- ***Ordinal encoding* (para variáveis ordinais):** atribui números sequenciais respeitando a ordem das categorias. Por exemplo, Fundamental = 1, Médio = 2, Superior = 3. O algoritmo passa a interpretar que Superior é "maior" que Médio, o que é coerente com a natureza da variável. Vale lembrar que essa codificação também sugere distâncias iguais entre os níveis, o que nem sempre é verdade.
+- ***Ordinal encoding* (para variáveis ordinais):** atribui números sequenciais respeitando a ordem das categorias. Por exemplo, Fundamental = 1, Médio = 2, Superior = 3. O algoritmo passa a interpretar que Superior é "maior" que Médio, o que é coerente com a natureza da variável.
 - ***One-hot encoding* (para variáveis nominais):** cria uma coluna binária (0 ou 1) para cada categoria, também chamada de variável *dummy*. Por exemplo, se a variável cidade tem as categorias Maceió, Recife e Salvador, uma pessoa que mora em Maceió recebe 1 na coluna `Cidade_Maceio` e 0 nas colunas `Cidade_Recife` e `Cidade_Salvador`. Como não impõe ordem entre as categorias, é a escolha adequada para variáveis nominais. Seu custo é o número de colunas, que cresce com a quantidade de categorias.
-- ***Target encoding* (avançado):** substitui cada categoria pela média da variável que se quer prever (a variável-alvo) naquela categoria. Por exemplo, ao prever o preço de imóveis, cada bairro é trocado pelo preço médio dos imóveis do bairro. É útil quando há muitas categorias e o *one-hot* geraria colunas demais. Tem o risco de vazamento de dados e *overfitting*, principalmente com categorias raras, por isso a média deve ser calculada apenas com os dados de treino.
+- ***Target encoding* (avançado):** substitui cada categoria pela média da variável que se quer prever (a variável-alvo) naquela categoria.
 
 #### Normalização de escalas
 
@@ -238,22 +238,12 @@ Verificar se a variável segue aproximadamente uma distribuição normal (o "sin
 
 ##### 2. Escolher o método adequado
 
-- ***Min-max scaling* (normalização):** redimensiona os valores para a faixa de 0 a 1, com a fórmula `(x − min) / (max − min)`. É indicado para algoritmos baseados em distância (como K-NN) e para redes neurais. É sensível a *outliers*: um único valor extremo comprime todos os outros em uma faixa estreita.
-- ***Z-score* (padronização):** transforma os valores para que a média seja 0 e o desvio padrão seja 1, com a fórmula `(x − média) / desvio padrão`. É indicado para algoritmos que assumem dados aproximadamente normais, como regressão linear e logística. Os valores não ficam limitados a uma faixa fixa.
-
-Exemplo com salários:
-
-| Salário | Min-max | Z-score |
-|---|---|---|
-| 2.000 | 0,00 | −0,84 |
-| 3.000 | 0,13 | −0,56 |
-| 10.000 | 1,00 | 1,40 |
-
-Quando há muitos *outliers*, uma alternativa é o *robust scaling*, que usa a mediana e o IQR no lugar da média e do desvio padrão. Algoritmos baseados em árvores de decisão, por outro lado, não são sensíveis à escala e dispensam esse passo.
+- ***Min-max scaling* (normalização):** redimensiona os valores para a faixa de 0 a 1. É indicado para algoritmos baseados em distância (como K-NN) e para redes neurais.
+- ***Z-score* (padronização):** transforma os valores para que a média seja 0 e o desvio padrão seja 1. É indicado para algoritmos que assumem dados aproximadamente normais, como regressão linear.
 
 ##### 3. Aplicar separadamente em treino e teste
 
-Os parâmetros da transformação (mínimo e máximo, ou média e desvio padrão) devem ser calculados apenas com os dados de treino. Em seguida, esses mesmos parâmetros são aplicados aos dados de teste. Se forem calculados com a base inteira, informações do teste vazam para o treino (*data leakage*) e o desempenho medido fica otimista demais.
+Os parâmetros da transformação (mínimo e máximo, ou média e desvio padrão) devem ser calculados apenas com os dados de treino. Em seguida, esses mesmos parâmetros são aplicados aos dados de teste. Assim, evita-se vazamento de dados (data leakage).
 
 ## Seleção de atributos
 
