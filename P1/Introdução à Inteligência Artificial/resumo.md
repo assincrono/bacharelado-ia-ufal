@@ -13,3 +13,5 @@ O AIMA (Russell & Norvig) organiza as definições de IA a partir de duas pergun
 - **Agir racionalmente:** o agente racional age para obter o melhor resultado (ou o melhor resultado esperado, em caso de incerteza), dado o que percebe e sabe. É a abordagem central do AIMA, por ser mais geral (a lógica é só um caminho entre outros, e às vezes um reflexo basta) e mais fácil de avaliar (não depende de saber como humanos pensam).
 
 Nenhuma das quatro é a definição "certa": cada uma ilumina um aspecto do problema, e a apostila traz trabalhos ligados a todas elas.
+
+Uma forma prática de usar a definição: pergunte se o sistema apenas executa regras fixas escritas por alguém, ou se ele percebe, raciocina, aprende e se adapta.
