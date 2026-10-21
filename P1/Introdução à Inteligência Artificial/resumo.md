@@ -1,6 +1,6 @@
 # Resumo: Introdução à Inteligência Artificial
 
-> Este resumo foi escrito por IA generativa a partir de uma apostila que, por sua vez, foi feita com base no planejamento das aulas (que também foi gerado por IA generativa). É IA até o fim. Não reclame comigo, olhe o nome da matéria.
+> Este resumo foi escrito por IA generativa a partir de uma apostila feita com base no planejamento das aulas (a própria apostila também foi gerada por IA generativa). É IA até o fim. Não reclame comigo, olhe o nome da matéria.
 
 
 **Apostila do aluno · Bacharelado em Inteligência Artificial, 1º período · UFAL, Instituto de Computação · Semestre 2026.2**
