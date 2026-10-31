@@ -130,3 +130,23 @@ A cardinalidade de um conjunto A, denotada |A|, é o número de elementos de A. 
 - |{𝑎, 𝑏}| = 2
 - |{𝑎, 𝑎}| = 1, pois elementos repetidos contam uma só vez
 - |∅| = 0
+
+## Produto Cartesiano
+
+O produto cartesiano de A e B é o conjunto de todos os pares ordenados cujo primeiro elemento vem de A e o segundo vem de B:
+
+A × B = {(a, b) | a ∈ A ∧ b ∈ B}
+
+**Exemplo:** para A = {1, 2, 3, 4} e B = {2, 3}:
+- A × B = {(1, 2), (2, 2), (3, 2), (4, 2), (1, 3), (2, 3), (3, 3), (4, 3)}
+- B × A = {(2, 1), (2, 2), (2, 3), (2, 4), (3, 1), (3, 2), (3, 3), (3, 4)}
+
+Para n conjuntos, o resultado é um conjunto de n-uplas:
+
+A₁ × A₂ × ... × Aₙ = {(a₁, a₂, ..., aₙ) | a₁ ∈ A₁ ∧ a₂ ∈ A₂ ∧ ... ∧ aₙ ∈ Aₙ}
+
+**Exemplo:** {a, b} × {1, 2} × {a, b} = {(a, 1, a), (a, 1, b), (a, 2, a), (a, 2, b), (b, 1, a), ..., (b, 2, b)}
+
+**Propriedades**
+- **Não comutativo:** em geral, A × B ≠ B × A.
+- **Não associativo:** em geral, (A × B) × C ≠ A × (B × C).
