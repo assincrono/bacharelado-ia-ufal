@@ -44,3 +44,33 @@ Há três formas de descrever um conjunto:
 
 ## Subconjunto
 
+A é subconjunto de B (A está contido em B) quando todo elemento de A também é elemento de B.
+
+A ⊆ B ⟺ (x ∈ A → x ∈ B)
+
+Se A não está contido em B, escrevemos A ⊈ B.
+
+### Subconjunto próprio
+
+Se A ⊆ B e A ≠ B, dizemos que A é subconjunto próprio de B e escrevemos A ⊂ B.
+
+### Exemplos
+
+Sejam A = {1, 7, 9, 15}, B = {7, 9} e C = {7, 9, 15, 20}:
+
+- B ⊆ C, B ⊆ A e B ⊂ A
+- A ⊄ C, pois 1 ∈ A e 1 ∉ C
+- {7} ⊂ A e ∅ ⊆ C
+
+### Propriedades
+
+- **Reflexiva:** todo conjunto é subconjunto de si mesmo: A ⊆ A.
+- **Transitiva:** (A ⊆ B) ∧ (B ⊆ C) → (A ⊆ C).
+- **Conjunto vazio:** é subconjunto de qualquer conjunto: ∅ ⊆ A.
+
+### Conjunto potência
+
+O conjunto potência (ou conjunto das partes) de A, denotado 𝒫(A), é o conjunto de todos os subconjuntos de A. Se A tem n elementos, 𝒫(A) tem 2ⁿ elementos.
+
+**Exemplo:** para A = {1, 2, 3}, 𝒫(A) = {∅, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}, com 2³ = 8 elementos.
+
