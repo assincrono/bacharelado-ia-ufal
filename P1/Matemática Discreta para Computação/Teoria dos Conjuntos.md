@@ -92,3 +92,32 @@ O conjunto potência (ou conjunto das partes) de A, denotado 𝒫(A), é o conju
 
   Aᶜ = {x ∈ U | x ∉ A} = {x | ¬(x ∈ A)}
 
+
+## Leis da Álgebra dos Conjuntos
+
+### Relação com as equivalências lógicas
+
+Várias leis dos conjuntos correspondem a equivalências lógicas já conhecidas (∨ ↔ ∪, ∧ ↔ ∩, ¬ ↔ complemento, 1 ↔ U, 0 ↔ ∅):
+
+| Equivalência lógica | Identidade de conjuntos |
+| --- | --- |
+| p ∨ 1 ≡ 1 | A ∪ U = U |
+| p ∧ 0 ≡ 0 | A ∩ ∅ = ∅ |
+| ¬(¬p) ≡ p | (Aᶜ)ᶜ = A |
+| p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r) | A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) |
+| p ∨ ¬p ≡ 1 | A ∪ Aᶜ = U |
+
+### Principais leis
+
+| Lei | Identidades |
+| --- | --- |
+| Elementos neutros | A ∪ ∅ = A; A ∩ U = A |
+| Dominação | A ∪ U = U; A ∩ ∅ = ∅ |
+| Idempotência | A ∪ A = A; A ∩ A = A |
+| Comutativas | A ∪ B = B ∪ A; A ∩ B = B ∩ A |
+| Associativas | (A ∪ B) ∪ C = A ∪ (B ∪ C); (A ∩ B) ∩ C = A ∩ (B ∩ C) |
+| Distributivas | A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C); A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) |
+| Absorção | A ∪ (A ∩ B) = A; A ∩ (A ∪ B) = A |
+| Duplo complemento (involução) | (Aᶜ)ᶜ = A |
+| Complementares | A ∪ Aᶜ = U; A ∩ Aᶜ = ∅ |
+| De Morgan | (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ; (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ |
