@@ -121,3 +121,12 @@ Várias leis dos conjuntos correspondem a equivalências lógicas já conhecidas
 | Duplo complemento (involução) | (Aᶜ)ᶜ = A |
 | Complementares | A ∪ Aᶜ = U; A ∩ Aᶜ = ∅ |
 | De Morgan | (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ; (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ |
+
+## Cardinalidade
+
+A cardinalidade de um conjunto A, denotada |A|, é o número de elementos de A. Por exemplo, A = {2, 4, 6} tem 3 elementos, logo |A| = 3.
+
+**Exemplos**
+- |{𝑎, 𝑏}| = 2
+- |{𝑎, 𝑎}| = 1, pois elementos repetidos contam uma só vez
+- |∅| = 0
