@@ -2,19 +2,19 @@
 
 ## O que é um conjunto?
 
-Na matemática, um conjunto é uma coleção de elementos. É considerado um dos conceitos mais básicos da matemática, sendo o elemento principal da teoria dos conjuntos.
+Um conjunto é uma coleção de elementos. É um dos conceitos mais fundamentais da matemática e o objeto central da teoria dos conjuntos.
 
-A relação básica entre um objeto e um conjunto é a relação de pertinência: quando um objeto x é um dos elementos que compõem o conjunto A, dizemos que x pertence a A.
+A relação entre um objeto e um conjunto é a de pertinência: se x é um dos elementos de A, dizemos que x pertence a A.
 
 **Exemplos**
-- Uma coleção de números é um conjunto, {1, 2, 3}.
-- Uma coleção de letras é um conjunto, {𝑎, 𝑏, 𝑐}.
-- Uma coleção de nomes é um conjunto, {𝐻𝑜𝑚𝑒𝑟, 𝐵𝑎𝑟𝑡, 𝐿𝑖𝑠𝑎}
+- Uma coleção de números é um conjunto, {2, 4, 6}.
+- Uma coleção de vogais é um conjunto, {𝑎, 𝑒, 𝑖, 𝑜, 𝑢}.
+- Uma coleção de cores é um conjunto, {𝑣𝑒𝑟𝑑𝑒, 𝑎𝑧𝑢𝑙, 𝑣𝑒𝑟𝑚𝑒𝑙ℎ𝑜}.
 
 ## Notação
 
-É possível descrever um conjunto de três maneiras diferentes, por:
+Há três formas de descrever um conjunto:
 
-1. Extensão: listando seus elementos
-2. Compreensão: definindo uma propriedade de seus elementos (o que, se for feito de forma descuidada, pode gerar problemas).
-3. Representação gráfica: usando Diagramas de Venn.
+1. **Extensão:** listar todos os seus elementos.
+2. **Compreensão:** enunciar uma propriedade que seus elementos satisfazem (isso exige cuidado, pois uma definição descuidada pode gerar paradoxos).
+3. **Representação gráfica:** usar Diagramas de Venn.
