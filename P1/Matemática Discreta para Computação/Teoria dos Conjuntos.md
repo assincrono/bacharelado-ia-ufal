@@ -18,3 +18,29 @@ Há três formas de descrever um conjunto:
 1. **Extensão:** listar todos os seus elementos.
 2. **Compreensão:** enunciar uma propriedade que seus elementos satisfazem (isso exige cuidado, pois uma definição descuidada pode gerar paradoxos).
 3. **Representação gráfica:** usar Diagramas de Venn.
+
+## Conjuntos Especiais
+
+- **Conjunto universo (U):** contém todos os elementos considerados em uma dada situação; todos os conjuntos em questão são seus subconjuntos.
+- **Conjunto vazio ({ } ou ∅):** o único conjunto sem elementos, com cardinalidade zero.
+
+### Conjuntos numéricos
+
+- **Naturais (ℕ):** números de contagem, ℕ = {0, 1, 2, 3, ...}. O zero é incluído por ter as mesmas propriedades algébricas.
+- **Inteiros (ℤ):** naturais e seus simétricos negativos, ℤ = {..., −2, −1, 0, 1, 2, ...}.
+- **Racionais (ℚ):** números que podem ser escritos como fração m/n, com m, n ∈ ℤ e n ≠ 0, ℚ = {x | x = m/n, m, n ∈ ℤ, n ≠ 0}. Todo inteiro é racional (n = 1).
+- **Irracionais (𝕀):** números que não podem ser escritos como fração; sua forma decimal é infinita e não periódica.
+- **Reais (ℝ):** união dos racionais e irracionais; representam quantidades contínuas, como 3,141592...
+
+## Comparação de Conjuntos
+
+- **Igualdade:** A = B quando todo elemento de A pertence a B e, reciprocamente, todo elemento de B pertence a A.
+
+  A = B ⟺ ∀x | (x ∈ A → x ∈ B) ∧ (x ∈ B → x ∈ A)
+
+- **Desigualdade:** A ≠ B quando existe um elemento de um dos conjuntos que não pertence ao outro.
+
+  A ≠ B ⟺ ∃x | (x ∈ A ∧ x ∉ B) ∨ (x ∉ A ∧ x ∈ B)
+
+## Subconjunto
+
