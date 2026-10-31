@@ -74,3 +74,21 @@ O conjunto potência (ou conjunto das partes) de A, denotado 𝒫(A), é o conju
 
 **Exemplo:** para A = {1, 2, 3}, 𝒫(A) = {∅, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}, com 2³ = 8 elementos.
 
+## Operações entre Conjuntos
+
+- **União (A ∪ B):** elementos que pertencem a A ou a B.
+
+  A ∪ B = {x ∈ U | (x ∈ A) ∨ (x ∈ B)}
+
+- **Intersecção (A ∩ B):** elementos que pertencem a A e a B ao mesmo tempo.
+
+  A ∩ B = {x ∈ U | (x ∈ A) ∧ (x ∈ B)}
+
+- **Diferença (A − B):** elementos de A que não estão em B.
+
+  A − B = {x ∈ U | (x ∈ A) ∧ (x ∉ B)}
+
+- **Complemento (Aᶜ ou Ā):** tudo o que resta no universo ao retirar A.
+
+  Aᶜ = {x ∈ U | x ∉ A} = {x | ¬(x ∈ A)}
+
